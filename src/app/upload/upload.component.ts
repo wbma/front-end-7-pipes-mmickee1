@@ -30,8 +30,8 @@ export class UploadComponent implements OnInit {
     formData.append('file', this.file);
     this.mediaService.uploading(formData).subscribe(response => {
       console.log(response);
-    }, (error3: HttpErrorResponse) => {
-      console.log(error3.error.message);
+    }, (error: HttpErrorResponse) => {
+      console.log(error.error.message);
     });
   }
 

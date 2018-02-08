@@ -55,6 +55,10 @@ export class MediaService {
     const settings = {
       headers: new HttpHeaders().set('x-access-token', localStorage.getItem('token')),
     };
-   return this.http.post(this.mediaUrl, file, settings);
+    return this.http.post(this.mediaUrl, file, settings);
+  }
+
+  public getNewFiles() {
+    return this.http.get(this.mediaUrl);
   }
 }
